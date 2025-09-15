@@ -1,0 +1,27 @@
+create database BCCL;
+use BCCL;
+
+CREATE TABLE mine_data (
+   MineID TEXT,
+   Year INT,
+   Month INT,
+   ProductionTons INT,
+   DispatchTons INT,
+   RejectionTons INT
+);
+DESC mine_data;
+INSERT INTO mine_data (MineID, Year, Month, ProductionTons, DispatchTons, RejectionTons)
+VALUES
+('MINE_A', 2023, 1, 1500, 1200, 50),
+('MINE_A', 2023, 2, 1600, 1400, 40),
+('MINE_B', 2023, 1, 1800, 1700, 60),
+('MINE_B', 2023, 2, 1750, 1600, 70);
+select * from mine_data;
+LOAD DATA INFILE 'C:\Users\simra\Desktop\BCCL_PROJECT'
+INTO TABLE mine_data
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(MineID, Year, Month, ProductionTons, DispatchTons, RejectionTons);
+
+
