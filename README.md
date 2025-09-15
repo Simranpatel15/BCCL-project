@@ -1,0 +1,1 @@
+*BCCL Mining DataBot* is a web-based Python application built using Flask. It helps users analyze mining data from BCCL by answering predefined queries, generating reports, and visualizing data through interactive charts. The bot connects to a MySQL database and supports CSV uploads for data management.
